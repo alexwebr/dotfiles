@@ -17,6 +17,7 @@ alias gl='git log --pretty --oneline --color --graph'
 alias gc='git commit'
 alias ga='git add'
 alias gp='git push'
+alias gr='echo "Are you sure you want to do a reset --hard to HEAD? Ctrl + C to cancel"; read; git reset --hard HEAD'
 
 # Rails
 alias cda='cd app/'
