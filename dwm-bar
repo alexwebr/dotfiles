@@ -1,14 +1,14 @@
 #!/bin/sh
 
 while true; do
-	day=$(date "+%b %e")
-	tasks=$(ps -e | wc -l)
-	mem=$(free -m | fgrep 'Mem:' | awk '{print $3}')
-	iops=$(iostat -d 2 2 | grep sda | tail -n 1 | awk '{print $2}')
-	bat=$(echo "$(cat /sys/class/power_supply/BAT1/charge_now) / $(cat /sys/class/power_supply/BAT1/charge_full) * 100" | bc -l | cut -d '.' -f 1)
-	temp="$(sensors | grep temp1 | awk '{print $2}' | tr -d '+C°' )*C"
-	time=$(date "+%l:%M%p")
+  day=$(date "+%b %e")
+  tasks=$(ps -e | wc -l)
+  mem=$(free -m | fgrep 'Mem:' | awk '{print $3}')
+  iops=$(iostat -d 2 2 | grep sda | tail -n 1 | awk '{print $2}')
+  bat=$(echo "$(cat /sys/class/power_supply/BAT1/charge_now) / $(cat /sys/class/power_supply/BAT1/charge_full) * 100" | bc -l | cut -d '.' -f 1)
+  temp="$(sensors | grep temp1 | awk '{print $2}' | tr -d '+C°' )*C"
+  time=$(date "+%l:%M%p")
   load=$(uptime | uptime | tr  ' ' '\n' | tail -n 3 | head -n 1 | tr -d ',')
 
-	xsetroot -name " ${iops} iops | $temp | $load | ${mem}mb | $bat% | $time  $day"
+  xsetroot -name "${iops} iops | $temp | $load | ${mem}mb | $bat% | $time  $day"
 done
