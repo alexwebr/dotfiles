@@ -17,6 +17,7 @@ map <F2> :NERDTreeToggle<CR>
 
 au BufNewFile,BufRead *.nse set filetype=lua
 
+
 " mintask
 " https://github.com/AlexWebr/mintask
 " Create a new top-level todo entry on a new line
