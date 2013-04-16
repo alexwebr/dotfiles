@@ -1,0 +1,20 @@
+[github]
+  user = AlexWebr
+[alias]
+  ba = branch -a
+  br = branch
+  ca = commit --all
+  ci = commit
+  co = checkout
+  dc = diff --color
+  ds = diff --stat
+  dw = diff --color --word-diff-regex='[[:alnum:]]+'
+  ls = log --stat --decorate
+  st = status -sb
+  bu = for-each-ref --format='%(refname:short) <-> %(upstream:short)' refs/heads
+  dn = diff --name-only origin/master...
+  dm = diff --stat origin/master...
+  standup = log --since=yesterday --oneline --author=aweber --color
+[color]
+        ui = true
+
