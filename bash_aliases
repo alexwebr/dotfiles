@@ -11,13 +11,9 @@ alias u='cd ..'
 alias v='vim'
 
 # Git
-alias gd='git diff --color'
-alias gs='git status --short'
-alias gl='git log --pretty --oneline --color --graph'
-alias gc='git commit'
-alias ga='git add'
-alias gp='git push'
-alias gr='echo "Are you sure you want to do a reset --hard to HEAD? Ctrl + C to cancel"; read; git reset --hard HEAD'
+alias gl="git log --pretty=oneline --graph --abbrev-commit"
+alias gd="git diff"
+alias gap="git add -p"
 
 # Rails
 alias cda='cd app/'
