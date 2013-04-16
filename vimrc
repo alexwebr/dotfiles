@@ -19,6 +19,8 @@ map <F2> :NERDTreeToggle<CR>
 
 au BufNewFile,BufRead *.nse set filetype=lua
 
+map <F3> :!clear; bash<CR><CR>
+
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 map <F7> :TlistToggle<CR>
 map <F8> :TlistAddFilesRecursive .<CR>
